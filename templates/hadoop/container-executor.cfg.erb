@@ -5,4 +5,5 @@ banned.users=hfds,yarn,mapred,bin
 #Prevent other super-users
 min.user.id=<%= scope.lookupvar('hadoop::min_uid') %>
 #comma separated list of system users who CAN run applications
-allowed.system.users=hive
+allowed.system.users=<%= scope.lookupvar('hadoop::allowed_system_users') %>
+
